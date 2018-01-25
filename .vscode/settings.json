@@ -1,4 +1,6 @@
 {
   "tslint.autoFixOnSave": true,
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier."
 }

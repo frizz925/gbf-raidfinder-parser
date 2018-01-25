@@ -4,7 +4,7 @@
   "description": "Parser for Granblue Fantasy raid tweets",
   "main": "build/index.js",
   "scripts": {
-    "build": "tsc && tspath",
+    "build": "tsc",
     "lint": "tslint -c tslint.json 'src/**/*.ts' '__tests__/**/*.ts'",
     "test": "jest"
   },

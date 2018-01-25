@@ -1,5 +1,2 @@
-import RaidTweet, {parseTweet} from './RaidTweet';
-
-export default {
-  RaidTweet, parseTweet,
-};
+import { parseTweet } from './RaidTweet';
+module.exports = parseTweet;

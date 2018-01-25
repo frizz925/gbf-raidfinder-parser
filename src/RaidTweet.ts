@@ -3,6 +3,7 @@ import Raid from './Raid';
 import Boss from './Boss';
 
 export default class RaidTweet extends ParsedText {
+  public language: string;
   public raid: Raid;
   public boss: Boss;
 
@@ -18,6 +19,7 @@ export default class RaidTweet extends ParsedText {
     this.text = text;
     this.boss = new Boss(lines[0]);
     this.raid = new Raid(lines[2]);
+    this.language = this.boss.language;
     return this;
   }
 
