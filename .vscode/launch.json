@@ -4,9 +4,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
-      "args": ["${workspaceFolder}/src/index.ts"],
-      "runtimeArgs": ["-r", "ts-node/register"],
+      "name": "Jest",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest.js",
       "protocol": "inspector",
       "internalConsoleOptions": "openOnFirstSessionStart"
     }
