@@ -2,6 +2,6 @@ node_js: 6
 script:
   - npm install
   - npm run lint
-  - npm run test
+  - npm run test:coverage
 after_success:
   - npm run codecov

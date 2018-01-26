@@ -9,7 +9,8 @@
     "prepare": "tsc",
     "build": "tsc",
     "lint": "tslint -c tslint.json 'src/**/*.ts' '__tests__/**/*.ts'",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
