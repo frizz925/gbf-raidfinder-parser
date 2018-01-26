@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "Parser for Granblue Fantasy raid tweets",
   "main": "./build/index.js",
-  "types": "./typings/index.d.ts",
   "scripts": {
     "codecov": "codecov",
-    "prepare": "tsc",
+    "prepare": "npm run build",
     "build": "tsc",
     "lint": "tslint -c tslint.json 'src/**/*.ts' '__tests__/**/*.ts'",
     "test": "jest",
