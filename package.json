@@ -5,6 +5,7 @@
   "main": "./build/index.js",
   "types": "./typings/index.d.ts",
   "scripts": {
+    "codecov": "codecov",
     "prepare": "tsc",
     "build": "tsc",
     "lint": "tslint -c tslint.json 'src/**/*.ts' '__tests__/**/*.ts'",
