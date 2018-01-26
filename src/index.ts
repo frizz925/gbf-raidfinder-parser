@@ -1,2 +1,1 @@
-import { parseTweet } from './RaidTweet';
-module.exports = parseTweet;
+export { parseTweet as parse, isRaidTweet } from './RaidTweet';

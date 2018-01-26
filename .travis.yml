@@ -1,9 +1,7 @@
 node_js: 6
 script:
-  - npm install -g codecov
   - npm install
-  - npm run build
   - npm run lint
   - npm run test
 after_success:
-  - codecov
+  - npm run codecov
