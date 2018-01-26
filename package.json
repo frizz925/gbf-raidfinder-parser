@@ -12,7 +12,14 @@
     "type": "git",
     "url": "git+https://github.com/Frizz925/gbf-raidfinder-parser.git"
   },
-  "keywords": ["granblue", "fantasy", "raidfinder", "twitter", "tweet", "raid"],
+  "keywords": [
+    "granblue",
+    "fantasy",
+    "raidfinder",
+    "twitter",
+    "tweet",
+    "raid"
+  ],
   "author": "Izra Faturrahman <Frizz925@hotmail.com>",
   "license": "MIT",
   "bugs": {
@@ -29,8 +36,14 @@
     "typescript": "^2.6.2"
   },
   "jest": {
-    "modulePaths": ["<rootDir>/src"],
-    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "modulePaths": [
+      "<rootDir>/src"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
     "transform": {
       "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
