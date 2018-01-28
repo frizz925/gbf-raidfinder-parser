@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Parser for Granblue Fantasy raid tweets",
   "main": "./build/index.js",
+  "types": "./build/index.d.ts",
   "scripts": {
     "codecov": "codecov",
     "prepare": "npm run build",
@@ -37,6 +38,6 @@
     "transform": {
       "\\.(ts|tsx)$": "ts-jest"
     },
-    "testMatch": ["**/__tests__/**/*.(spec|test).(ts|tsx|js)"]
+    "testMatch": ["**/test/*.(spec|test).(ts|tsx|js)"]
   }
 }

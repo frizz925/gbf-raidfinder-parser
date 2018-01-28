@@ -1,14 +1,19 @@
 import ParsedText from './ParsedText';
 
-const BOSS_LEVEL_REGEXP = /^(Lv|Lvl )(\d{1,3}) (.+)$/;
+const BOSS_REGEXP = /^(Lv|Lvl )(\d{1,3}) (.+)$/;
 
 export default class Boss extends ParsedText {
+  public static readonly BOSS_REGEXP = BOSS_REGEXP;
+  public static parse(text: string): Boss {
+    return new Boss(text);
+  }
+
   public language: string;
   public name: string;
   public level: number;
 
   public parse(text: string): Boss {
-    const matches = text.match(BOSS_LEVEL_REGEXP);
+    const matches = text.match(BOSS_REGEXP);
     if (!matches) {
       throw new TypeError(`Can't parse boss text '${text}'`);
     }

@@ -2,7 +2,27 @@ import ParsedText from './ParsedText';
 import Raid from './Raid';
 import Boss from './Boss';
 
+export function parseTweet(text: string): RaidTweet {
+  return new RaidTweet(text);
+}
+
+export function isRaidTweet(text: string): boolean {
+  try {
+    parseTweet(text);
+    return true;
+  } catch (e) {
+    if (e instanceof TypeError && e.message.match(/can't parse/i)) {
+      return false;
+    } else {
+      throw e;
+    }
+  }
+}
+
 export default class RaidTweet extends ParsedText {
+  public static readonly parse = parseTweet;
+  public static readonly isRaidTweet = isRaidTweet;
+
   public language: string;
   public raid: Raid;
   public boss: Boss;
@@ -25,22 +45,5 @@ export default class RaidTweet extends ParsedText {
 
   private _invalidFormatError(text: string): TypeError {
     throw new TypeError(`Can't parse text '${text}'`);
-  }
-}
-
-export function parseTweet(text: string): RaidTweet {
-  return new RaidTweet(text);
-}
-
-export function isRaidTweet(text: string): boolean {
-  try {
-    parseTweet(text);
-    return true;
-  } catch (e) {
-    if (e instanceof TypeError && e.message.match(/can't parse/i)) {
-      return false;
-    } else {
-      throw e;
-    }
   }
 }
