@@ -7,6 +7,7 @@
   "scripts": {
     "codecov": "codecov",
     "prepare": "npm run build",
+    "install": "npm run build",
     "build": "tsc",
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'",
     "test": "jest",
