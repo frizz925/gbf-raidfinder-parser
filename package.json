@@ -1,13 +1,12 @@
 {
   "name": "gbf-raidfinder-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parser for Granblue Fantasy raid tweets",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
   "scripts": {
     "codecov": "codecov",
     "prepare": "npm run build",
-    "install": "npm run build",
     "build": "tsc",
     "lint": "tslint -c tslint.json 'src/**/*.ts' 'test/**/*.ts'",
     "test": "jest",
