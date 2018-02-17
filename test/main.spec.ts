@@ -85,4 +85,8 @@ describe('Parser tests', () => {
   it('test Japanese tweet without image', () => {
     testTweet(readTweet('jp', 'without_image'));
   });
+
+  it('test Japanese tweet with Japanese space character', () => {
+    testTweet(readTweet('jp', 'with_japanese_space'));
+  });
 });

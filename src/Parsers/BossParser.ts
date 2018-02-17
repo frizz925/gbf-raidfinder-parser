@@ -1,7 +1,7 @@
 import TextParser from './TextParser';
 import Boss from '../Boss';
 
-const BOSS_REGEXP = /^(Lv|Lvl )(\d{1,3}) (.+)$/;
+const BOSS_REGEXP = /^(Lv|Lvl )(\d{1,3})\s+(.+)$/u;
 export function parseBoss(text: string) {
   const parser = new BossParser();
   return parser.parse(text);
