@@ -8,9 +8,9 @@ export default class Boss extends ParsedText {
     return new Boss(text);
   }
 
-  public language: string;
-  public name: string;
-  public level: number;
+  public language?: string;
+  public name?: string;
+  public level?: number;
 
   public parse(text: string): Boss {
     const matches = text.match(BOSS_REGEXP);

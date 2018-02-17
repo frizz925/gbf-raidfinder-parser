@@ -2,8 +2,14 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { parseTweet, isRaidTweet } from '../src/RaidTweet';
 
-function readTweet(lang: string, withMessage: boolean): string {
-  const fileName = lang + (withMessage ? '_with' : '_no') + '_message.txt';
+function readTweet(lang: string, suffix: boolean | string): string {
+  const nameParts = [lang];
+  if (typeof suffix === 'boolean') {
+    nameParts.push(suffix ? 'with' : 'no', 'message');
+  } else {
+    nameParts.push(suffix);
+  }
+  const fileName = nameParts.join('_') + '.txt';
   const filePath = path.resolve(__dirname, 'tweets', fileName);
   return fs.readFileSync(filePath).toString('utf-8');
 }
@@ -70,5 +76,13 @@ describe('Parser tests', () => {
 
   it('test with a random Japanese tweet', () => {
     testTweetError('これは日本語のランダムなつぶやきです');
+  });
+
+  it('test English tweet without image', () => {
+    testTweet(readTweet('en', 'without_image'));
+  });
+
+  it('test Japanese tweet without image', () => {
+    testTweet(readTweet('jp', 'without_image'));
   });
 });

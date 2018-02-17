@@ -14,8 +14,8 @@ function getRaidCode(text: string): string | null {
 }
 
 export default class Raid extends ParsedText {
-  public message: string;
-  public code: string | undefined;
+  public message?: string;
+  public code?: string;
 
   public parse(text: string): Raid {
     const parts = (getRaidCode(text) || '').split(' ');

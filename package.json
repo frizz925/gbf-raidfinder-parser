@@ -1,6 +1,6 @@
 {
   "name": "gbf-raidfinder-parser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Parser for Granblue Fantasy raid tweets",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",

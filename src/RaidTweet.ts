@@ -23,18 +23,23 @@ export default class RaidTweet extends ParsedText {
   public static readonly parse = parseTweet;
   public static readonly isRaidTweet = isRaidTweet;
 
-  public image: string;
-  public language: string;
-  public raid: Raid;
-  public boss: Boss;
+  public image?: string;
+  public language?: string;
+  public raid?: Raid;
+  public boss?: Boss;
 
   public parse(text: string): RaidTweet {
     const lines = text
       .trim()
       .split('\n')
       .reverse();
-    if (lines.length < 4) {
+    if (lines.length < 3) {
       throw this._invalidFormatError(text);
+    }
+
+    // pad the tokenized string if it doesn't start with an image link
+    if (!lines[0].startsWith('https://t.co')) {
+      lines.splice(0, 0, '');
     }
 
     this.text = text;
