@@ -1,8 +1,7 @@
-export default abstract class ParsedText {
-  public text?: string;
-  public constructor(text: string) {
-    this.parse(text);
-  }
+export default class ParsedText {
+  public text: string;
 
-  public abstract parse(text: string): ParsedText;
+  public constructor(text: string) {
+    this.text = text;
+  }
 }

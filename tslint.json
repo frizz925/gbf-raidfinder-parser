@@ -5,7 +5,11 @@
   "rules": {
     "quotemark": [true, "single"],
     "ordered-imports": false,
-    "object-literal-key-quotes": false
+    "object-literal-key-quotes": false,
+    "object-literal-sort-keys": false,
+    "interface-name": false,
+    "trailing-comma": false,
+    "no-trailing-whitespace": true
   },
   "rulesDirectory": []
 }

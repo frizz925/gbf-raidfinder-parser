@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { parseTweet, isRaidTweet } from '../src/RaidTweet';
+import { parse as parseTweet, isRaidTweet } from '../src';
 
 function readTweet(lang: string, suffix: boolean | string): string {
   const nameParts = [lang];
