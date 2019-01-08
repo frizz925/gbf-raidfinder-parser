@@ -2,6 +2,10 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { parse as parseTweet, isRaidTweet } from '../src';
 
+interface TestOptions {
+  [key: string]: any;
+}
+
 function readTweet(lang: string, suffix: boolean | string): string {
   const nameParts = [lang];
   if (typeof suffix === 'boolean') {
@@ -14,10 +18,10 @@ function readTweet(lang: string, suffix: boolean | string): string {
   return fs.readFileSync(filePath).toString('utf-8');
 }
 
-function testTweet(tweet: string, options?: object): void {
+function testTweet(tweet: string, options: TestOptions = {}): void {
   const raidTweet = parseTweet(tweet);
   expect(raidTweet).toHaveProperty('text', tweet);
-  for (const k in options || {}) {
+  for (const k in options) {
     if (!options.hasOwnProperty(k)) {
       continue;
     }
